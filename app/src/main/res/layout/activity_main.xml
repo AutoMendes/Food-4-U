@@ -6,6 +6,65 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <ImageView
+        android:id="@+id/fundoAmarelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logo"
+        app:srcCompat="@drawable/retangulo_cortado" />
+
+    <ImageView
+        android:id="@+id/loginImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/retanguloLogin"
+        app:layout_constraintEnd_toStartOf="@+id/barraSeparar"
+        app:srcCompat="@drawable/login" />
+
+    <ImageView
+        android:id="@+id/barraSeparar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/retanguloLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/linha_7" />
+
+    <ImageView
+        android:id="@+id/registarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/retanguloLogin"
+        app:layout_constraintStart_toEndOf="@+id/barraSeparar"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/registar" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/fundoAmarelo"
+        app:layout_constraintStart_toStartOf="@+id/fundoAmarelo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageView
+        android:id="@+id/retanguloLogin"
+        android:layout_width="387dp"
+        android:layout_height="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ret_ngulo_4"
+        tools:layout_editor_absoluteY="299dp" />
+
     <TextView
         android:id="@+id/emailViewCircle"
         android:layout_width="300dp"
@@ -14,51 +73,58 @@
         android:textAlignment=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499" />
-
-    <TextView
-        android:id="@+id/emailText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email:"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="356dp" />
+        app:layout_constraintVertical_bias="0.488" />
 
     <TextView
         android:id="@+id/passwordViewCircle"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/rounded_corners"
         android:textAlignment=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.637" />
+        app:layout_constraintEnd_toEndOf="@+id/retanguloLogin"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="@+id/retanguloLogin"
+        app:layout_constraintTop_toBottomOf="@+id/emailViewCircle" />
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Email:"
+        app:layout_constraintBottom_toBottomOf="@+id/emailViewCircle"
+        app:layout_constraintStart_toStartOf="@+id/emailViewCircle"
+        app:layout_constraintTop_toTopOf="@+id/emailViewCircle" />
+
 
     <TextView
         android:id="@+id/passwordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="Password"
-        tools:layout_editor_absoluteX="68dp"
-        tools:layout_editor_absoluteY="449dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/passwordViewCircle"
+        app:layout_constraintStart_toStartOf="@+id/passwordViewCircle"
+        app:layout_constraintTop_toTopOf="@+id/passwordViewCircle"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="130dp"
         android:layout_height="40dp"
-        android:text="Login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="515dp"
+        android:layout_margin="120dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/yellow_corner_button"
         android:backgroundTint="@color/yellow"
-         />
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordViewCircle"
+        app:backgroundTint = ""
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
