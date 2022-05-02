@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
 
     <ImageView
@@ -45,7 +45,10 @@
         app:layout_constraintBottom_toTopOf="@+id/retanguloLogin"
         app:layout_constraintStart_toEndOf="@+id/barraSeparar"
         app:layout_constraintTop_toBottomOf="@+id/logo"
+        android:onClick="onClick"
+        android:clickable="true"
         app:srcCompat="@drawable/registar" />
+
 
     <ImageView
         android:id="@+id/logo"

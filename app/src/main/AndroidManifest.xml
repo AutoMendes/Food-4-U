@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.grupo1.food4u">
+    package="com.grupo1.food4u" >
 
     <application
         android:allowBackup="true"
@@ -8,10 +8,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Food4U">
+        android:theme="@style/Theme.Food4U" >
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:label="@string/title_activity_registo"
+            android:theme="@style/Theme.Food4U.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
