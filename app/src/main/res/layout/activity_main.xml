@@ -11,8 +11,8 @@
         android:id="@+id/fundoAmarelo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="-11dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/logo"
         app:srcCompat="@drawable/retangulo_cortado" />
@@ -60,43 +60,47 @@
         android:id="@+id/retanguloLogin"
         android:layout_width="387dp"
         android:layout_height="240dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fundoAmarelo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ret_ngulo_4"
-        tools:layout_editor_absoluteY="299dp"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/emailViewCircle"
         android:layout_width="300dp"
         android:layout_height="50dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/rounded_corners"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.488" />
+        app:layout_constraintTop_toTopOf="@+id/retanguloLogin" />
 
     <EditText
         android:id="@+id/editEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="70dp"
+        android:layout_marginBottom="2dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/emailViewCircle"
         app:layout_constraintEnd_toEndOf="@+id/emailViewCircle"
         app:layout_constraintStart_toStartOf="@+id/emailViewCircle"
-        tools:layout_editor_absoluteY="338dp"
+        app:layout_constraintTop_toTopOf="@+id/emailViewCircle"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/passwordViewCircle"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/rounded_corners"
+        app:layout_constraintBottom_toBottomOf="@+id/retanguloLogin"
         app:layout_constraintEnd_toEndOf="@+id/retanguloLogin"
         app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintStart_toStartOf="@+id/retanguloLogin"
@@ -107,28 +111,30 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="70dp"
         android:ems="10"
         android:hint="Password"
-        android:layout_marginRight="70dp"
         android:inputType="textPassword"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/passwordViewCircle"
         app:layout_constraintEnd_toEndOf="@+id/passwordViewCircle"
         app:layout_constraintStart_toStartOf="@+id/passwordViewCircle"
-        tools:layout_editor_absoluteY="406dp"
+        app:layout_constraintTop_toTopOf="@+id/passwordViewCircle"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="130dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
         android:layout_margin="120dp"
         android:layout_marginTop="60dp"
         android:background="@drawable/yellow_corner_button"
         android:backgroundTint="@color/yellow"
         android:text="Login"
+        app:backgroundTint="@color/yellow"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordViewCircle"
-        app:backgroundTint = "@color/yellow"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
